@@ -42,6 +42,18 @@ function BuyAutoCLickerButton(){
   }
 }
 
+const ResetEl = document.querySelector("#ResetButton");
+ResetEl.addEventListener("click", ResetButton)
+
+function ResetButton(){
+  donut.donutCount = 0;
+  donut.autoClickerCount = 0;
+  donut.autoClickerCost = 10;
+  donut.donutMutiplierCount = 0;
+  donut.donutMutiplier = 10;
+  updateView();
+}
+
 const MutiplierEl = document.querySelector("#DonutMutiplierButton");
 MutiplierEl.addEventListener("click", BuyDonutMultiplierButton)
 
